@@ -20,7 +20,41 @@ void draw(){
   line(startX,startY,endX,endY);
   startX = endX;
   startY = endY;
+      //passive clouds
+    for(x = 50; x < 700; x+=100)
+    {
+         fill(100,100,100,10000);
+   stroke(100,100,100);
+      ellipse(x,20,110,70);
+      ellipse(x + 10,20,100,70);
+    }
+  //angsty cloud
+ if(startX < 700){
+   fill(100,100,100,10000);
+   strokeWeight(2);
+   stroke(80,80,80);
+    ellipse(startX,20,200,40);
+    ellipse(startX,20,60,70);
+    ellipse(startX + 50,20,60,50);
+    ellipse(startX - 50,20,60,50);
+     ellipse(startX,10,60,50);
+    strokeWeight(8);
+    }
 
+   //strike zone
+  if (startY > 600)
+   {
+     fill((int)(Math.random() * 256+250),(int)(Math.random() * 256+200),(int)(Math.random() * 1), 600);
+     ellipse(startX,startY,200,200);
+     if(startY > 600)
+     { 
+        fill(255,255,255,100);
+        rect(-100,-100,800,800);
+        startY = 0;
+     }
+       
+   }
+}
 //restart simulation
 void mousePressed(){
   startX = 100;
