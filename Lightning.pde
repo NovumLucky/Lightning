@@ -55,13 +55,6 @@ void draw(){
      }
        
    }
-     
-   
-    System.out.println("startX " + startX);
- System.out.println("endX " + endX);
- System.out.println("startY " + startY);
- System.out.println("endY " + endY);
-  System.out.println("X is " + x);
 }
 //restart simulation
 void mousePressed(){
